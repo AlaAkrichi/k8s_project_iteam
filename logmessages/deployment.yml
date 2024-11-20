@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: logmessage-deployment
+  labels:
+    app: logmessage
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: logmessage
+  template:
+    metadata:
+      labels:
+        app: logmessage
+    spec:
+      containers:
+      - name: logmessage
+        image: akrichi/logmessage:lab
+
