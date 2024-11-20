@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: usersapideployment
+  namespace: microservices-lab-iteam
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: usersapideployment
+  template:
+    metadata:
+      labels:
+        app: usersapideployment
+    spec:
+      containers:
+      - name: users-api
+        image: akrichi/users-api:lab
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8083
