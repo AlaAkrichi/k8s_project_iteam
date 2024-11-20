@@ -1,1 +1,6 @@
 # put any config here 
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: microservices-lab-iteam-config
+  namespace: microservices-lab-iteam
