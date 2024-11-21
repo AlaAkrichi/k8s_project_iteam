@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: logmessage-deployment
+  name: logmessagedeployment
   labels:
     app: logmessage
 spec:
@@ -17,4 +17,5 @@ spec:
       containers:
       - name: logmessage
         image: akrichi/logmessage:lab
+        
 

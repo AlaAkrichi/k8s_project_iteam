@@ -2,4 +2,3 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: microservices-lab-iteam
-  namespace: microservices-lab-iteam
