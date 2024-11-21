@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todoapideployment
+  namespace: microservices-lab-iteam
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: todoapideployment
+  template:
+    metadata:
+      labels:
+        app: todoapideployment
+    spec:
+      containers:
+      - name: todo-api
+        image: akrichi/todos-api:lab
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8082
