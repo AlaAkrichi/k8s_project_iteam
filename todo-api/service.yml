@@ -8,5 +8,5 @@ spec:
     app: todosapideployment
   ports:
     - protocol: TCP
-      port: 3002
+      port: 8082
       targetPort: 8082 #container port 

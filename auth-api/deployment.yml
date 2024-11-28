@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: authapideployment
+  labels:
+    app: authapi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: authapi
+  template:
+    metadata:
+      labels:
+        app: authapi
+    spec:
+      containers:
+      - name: authapi
+        image: akrichi/lauth-api:lab
+        
+

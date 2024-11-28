@@ -7,4 +7,7 @@ metadata:
 spec:
   selector:
     app: logsapideployment
-
+  ports:
+    - protocol: TCP
+      port: 8084
+      targetPort: 8084
